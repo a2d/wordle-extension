@@ -1,0 +1,26 @@
+{
+  "name": "Wordle Helper",
+  "description": "Wordle Helper Extension",
+  "version": "1.0",
+  "version_name": "1.0",
+  "manifest_version": 3,
+  "author": "A2D",
+  "homepage_url": "https://adatto.co.uk/",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "webNavigation"
+  ],
+  "action": {},
+  "host_permissions": ["*://*/"],
+  "background": {
+    "service_worker": "sw.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "*://www.powerlanguage.co.uk/wordle/*" ],
+      "js": [ "content.js" ]
+    }
+  ]
+}
